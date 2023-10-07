@@ -19,7 +19,7 @@ class PublisherApplicationTests {
         factory.setHost("121.5.143.96");
         factory.setUsername("itcast");
         factory.setPassword("123321");
-        factory.setPort(5673);
+        factory.setPort(5672);
         factory.setVirtualHost("/");
         // 1.2 建立连接
         Connection connection = factory.newConnection();

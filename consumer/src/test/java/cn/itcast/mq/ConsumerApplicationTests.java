@@ -14,7 +14,7 @@ class ConsumerApplicationTests {
     void consumer() throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("121.5.143.96");
-        factory.setPort(5673);
+        factory.setPort(5672);
         factory.setUsername("itcast");
         factory.setPassword("123321");
         factory.setVirtualHost("/");

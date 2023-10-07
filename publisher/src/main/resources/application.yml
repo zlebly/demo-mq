@@ -1,0 +1,7 @@
+spring:
+  rabbitmq:
+    host: 121.5.143.96
+    port: 5672
+    username: itcast
+    password: 123321
+    virtual-host: /
