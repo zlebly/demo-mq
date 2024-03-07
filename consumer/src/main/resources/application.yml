@@ -1,6 +1,6 @@
 spring:
   rabbitmq:
-    host: 121.5.143.96
+    host: 192.168.28.127
     port: 5672
     username: itcast
     password: 123321

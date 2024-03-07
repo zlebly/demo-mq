@@ -19,9 +19,30 @@ public class SpringAMQPTest {
     private RabbitTemplate rabbitTemplate;
 
     @Test
+    public void testFanoutExchange() {
+        String exchangeName = "simple.fanout.exchange";
+        String message = "hello, simple fanout exchange";
+        rabbitTemplate.convertAndSend(exchangeName, "", message);
+    }
+
+    @Test
+    public void testWorkQueue() throws InterruptedException {
+        String queueName = "simple.queue";
+        String message = "hello, simple queue ";
+
+        // 发送消息
+        for(int i = 0; i < 50; i++) {
+            rabbitTemplate.convertAndSend(queueName, message + i);
+            System.out.println("发送消息：" + message + i);
+            Thread.sleep(20);
+        }
+    }
+
+    @Test
     public void testAMQP() {
         String queueName = "simple.queue";
         String message = "SpringAMQPTest";
+        // 发送消息
         rabbitTemplate.convertAndSend(queueName, message);
     }
 

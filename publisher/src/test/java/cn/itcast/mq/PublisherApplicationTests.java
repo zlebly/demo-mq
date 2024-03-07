@@ -16,7 +16,7 @@ class PublisherApplicationTests {
         // 1.建立连接
         ConnectionFactory factory = new ConnectionFactory();
         // 1.1 设置连接参数
-        factory.setHost("121.5.143.96");
+        factory.setHost("192.168.28.127");
         factory.setUsername("itcast");
         factory.setPassword("123321");
         factory.setPort(5672);
@@ -34,5 +34,6 @@ class PublisherApplicationTests {
         // 5.关闭连接资源
         channel.close();
         connection.close();
+        System.out.println("消息发送完成:" + msg);
     }
 }

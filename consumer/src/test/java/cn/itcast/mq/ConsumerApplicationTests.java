@@ -13,7 +13,7 @@ class ConsumerApplicationTests {
     @Test
     void consumer() throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("121.5.143.96");
+        factory.setHost("192.168.28.127");
         factory.setPort(5672);
         factory.setUsername("itcast");
         factory.setPassword("123321");
@@ -33,4 +33,6 @@ class ConsumerApplicationTests {
         });
         System.out.println("消费者等待接收消息...");
     }
+
+
 }
