@@ -1,7 +1,10 @@
 spring:
   rabbitmq:
-    host: 192.168.28.127
-    port: 5672
+    #    host: 192.168.28.127
+    #    port: 5672
+    # 花生壳映射地址
+    host: 4996384l2d.goho.co
+    port: 41897
     username: itcast
     password: 123321
     virtual-host: /
